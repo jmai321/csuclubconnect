@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
       <Header />
       <div className="flex flex-wrap justify-evenly mx-20 p-0">
         {schools.map((school) => (
-          <Link key={school.id} to={`/school/${school.id}`}> {/* Use Link component */}
+          <Link key={school.id} to={`/school/${school.id}`}>
             <SchoolBox name={school.name} />
           </Link>
         ))}
