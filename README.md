@@ -1,7 +1,7 @@
 # CSU Club Connect (IN PROGRESS)
 
 ## About
-* Developed a dynamic and responsive web application, CSU Club Connect, using React, TypeScript, and Tailwind CSS. The application serves as a centralized platform for California State University (CSU) students to discover, join, and create clubs within their campuses.
+* Developing a dynamic and responsive web application, CSU Club Connect, using React, TypeScript, and Tailwind CSS. The application serves as a centralized platform for California State University (CSU) students to discover, join, and create clubs within their campuses.
 
 ## Features  
 * Club Search: Easily search and find clubs based on interests, keywords, or categories.
