@@ -1,6 +1,6 @@
 import React from 'react';
-import ClubSearchBar from './ClubSearchBar';
-import ClubFilter from './ClubFilter';
+import ClubSearchBar from './ClubSearch/ClubSearchBar';
+import ClubFilter from './ClubSearch/ClubFilter';
 
 const ClubSearch: React.FC = () => {
     return (

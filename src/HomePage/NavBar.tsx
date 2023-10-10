@@ -1,6 +1,6 @@
 import React from 'react';
-import TopNav from './TopNav';
-import HomeSearch from './HomeSearch';
+import TopNav from './NavBar/TopNav';
+import HomeSearch from './NavBar/HomeSearch';
 
 const NavBar: React.FC = () => {
     return ( 

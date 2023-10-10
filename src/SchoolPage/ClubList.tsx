@@ -1,5 +1,5 @@
 import React from 'react';
-import ClubBox from './ClubBox';
+import ClubBox from './ClubList/ClubBox';
 
 const ClubList: React.FC<{ clubs: { id: number; name: string }[] }> = ({ clubs }) => {
     return (
