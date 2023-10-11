@@ -1,0 +1,251 @@
+{
+  "schools": [
+      {
+        "id": "1",
+        "name": "Cal State University, Fullerton",
+        "slug": "cal-state-fullerton",
+        "clubs": [
+            {
+                "id": "1_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "1_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "Cal Poly Pomona",
+        "slug": "cal-poly-pomona",
+        "clubs": [
+            {
+                "id": "2_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "2_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "Cal Poly Humboldt",
+        "slug": "cal-poly-humboldt",
+        "clubs": [
+            {
+                "id": "3_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "3_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "4",
+        "name": "Cal State University, Bakersfield",
+        "slug": "cal-state-bakersfield",
+        "clubs": [
+            {
+                "id": "4_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "4_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "5",
+        "name": "Cal State University, Channel Islands",
+        "slug": "cal-state-channel-islands",
+        "clubs": [
+            {
+                "id": "5_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "5_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "6",
+        "name": "Cal State University, Chico",
+        "slug": "cal-state-chico",
+        "clubs": [
+            {
+                "id": "6_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "6_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "7",
+        "name": "Cal State University, Dominguez Hills",
+        "slug": "cal-state-dominguez-hills",
+        "clubs": [
+            {
+                "id": "7_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "7_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "8",
+        "name": "Cal State University, East Bay",
+        "slug": "cal-state-east-bay",
+        "clubs": [
+            {
+                "id": "8_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "8_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "9",
+        "name": "Cal State University, Fresno",
+        "slug": "cal-state-fresno",
+        "clubs": [
+            {
+                "id": "9_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "9_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "10",
+        "name": "Cal State University, Long Beach",
+        "slug": "cal-state-long-beach",
+        "clubs": [
+            {
+                "id": "10_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "10_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "11",
+        "name": "Cal State University, Los Angeles",
+        "slug": "cal-state-los-angeles",
+        "clubs": [
+            {
+                "id": "11_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "11_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "12",
+        "name": "Cal State University, Monterey Bay",
+        "slug": "cal-state-monterey-bay",
+        "clubs": [
+            {
+                "id": "12_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "12_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      },
+      {
+        "id": "13",
+        "name": "Cal State University, Northridge",
+        "slug": "cal-state-northridge",
+        "clubs": [
+            {
+                "id": "13_1",
+                "name": "Computer Science Club",
+                "slug": "cs-club",
+                "description": "Description"
+            },
+            {
+                "id": "13_2",
+                "name": "Mathematics Club",
+                "slug": "math-club",
+                "description": "Description"
+            }
+        ]
+      }
+  ]
+}

@@ -1,25 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import SchoolBanner from './SchoolBanner';
 import SchoolTopNav from './SchoolTopNav';
 import ClubSearch from './ClubSearch';
 import ClubList from './ClubList';
+import axios from 'axios';
 
-const clubsData = [
-  { id: 1, name: 'Club 1' },
-  { id: 2, name: 'Club 2' },
+interface Club {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+}
 
-];
+interface School {
+  id: string;
+  name: string;
+  slug: string;
+  clubs: Club[];
+}
 
 const SchoolPage: React.FC = () => {
-  const { schoolId } = useParams<{ schoolId: string }>();
+  const { schoolSlug } = useParams<{ schoolSlug: string }>();
+  const [school, setSchool] = useState<School | null>(null);
+  const [clubs, setClubs] = useState<Club[]>([]);
+
+  useEffect(() => {
+    axios.get<School[]>(`http://localhost:8000/schools`)
+      .then(response => {
+        const foundSchool = response.data.find(school => school.slug === schoolSlug);
+        if (foundSchool) {
+          setSchool(foundSchool);
+          setClubs(foundSchool.clubs);
+        } else {
+          console.error(`School with slug '${schoolSlug}' not found.`);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching school data:', error);
+      });
+  }, [schoolSlug]);
+
+  if (!school) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
       <SchoolTopNav />
-      <SchoolBanner schoolName='Placeholder name for database'/>
+      <SchoolBanner schoolName={school.name} />
       <ClubSearch />
-      <ClubList clubs={clubsData} />
+      <ClubList clubs={clubs} />
     </div>
   );
 };

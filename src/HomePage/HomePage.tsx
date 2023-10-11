@@ -1,32 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import Header from './Header';
 import SchoolBox from './SchoolBox';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+interface Club {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+}
 
-const schools = [
-  { id: 1, name: 'Cal State Fullerton' },
-  { id: 2, name: 'Cal Poly Pomona' },
-  { id: 3, name: 'Cal State Long Beach'},
-  { id: 4, name: 'Cal State San Diego'},
-  { id: 5, name: 'Cal State Los Angeles'},
-  { id: 6, name: 'Cal State Channel Islands'},
-  { id: 7, name: 'Cal State Monterey Bay'},
-  { id: 8, name: 'Cal Poly Humboldt'},
-  { id: 9, name: 'Cal State Chico'},
-  { id: 10, name: 'Cal State Sacramento'},
-  { id: 11, name: 'Cal State Bakersfield'},
-];
+interface School {
+  id: string;
+  name: string;
+  slug: string;
+  clubs: Club[];
+}
 
 const HomePage: React.FC = () => {
+  const [schools, setSchools] = useState<School[]>([]);
+
+  useEffect(() => {
+    axios.get<School[]>('http://localhost:8000/schools')
+      .then(response => {
+        setSchools(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching schools:', error);
+      });
+  }, []);
+
   return (
     <div>
       <NavBar />
       <Header />
       <div className="flex flex-wrap justify-evenly mx-20 p-0">
         {schools.map((school) => (
-          <Link key={school.id} to={`/school/${school.id}`}>
+          <Link key={school.id} to={`/${school.slug}`}>
             <SchoolBox name={school.name} />
           </Link>
         ))}
