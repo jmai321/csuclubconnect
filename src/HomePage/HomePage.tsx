@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
       <div className="flex flex-wrap justify-evenly mx-20 p-0">
         {schools.map((school) => (
           <Link key={school.id} to={`/${school.slug}`}>
-            <SchoolBox name={school.name} />
+            <SchoolBox name={school.name}/>
           </Link>
         ))}
       </div>

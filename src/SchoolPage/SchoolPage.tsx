@@ -33,7 +33,7 @@ const SchoolPage: React.FC = () => {
           setSchool(foundSchool);
           setClubs(foundSchool.clubs);
         } else {
-          console.error(`School with slug '${schoolSlug}' not found.`);
+          console.error(`'${schoolSlug}' not found.`);
         }
       })
       .catch(error => {
@@ -50,7 +50,7 @@ const SchoolPage: React.FC = () => {
       <SchoolTopNav />
       <SchoolBanner schoolName={school.name} />
       <ClubSearch />
-      <ClubList clubs={clubs} />
+      <ClubList clubs={school.clubs} schoolSlug={school.slug}/>
     </div>
   );
 };
