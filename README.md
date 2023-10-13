@@ -11,4 +11,4 @@
 * Developed Using: React, Tailwind CSS, Typescript, MySQL
 
 ## Contributors
-* Jonathan Mai: [jmai321](https://github.com/jmai321)
+* Jonathan Mai: [@jmai321](https://github.com/jmai321)
