@@ -1,7 +1,7 @@
 # CSU Club Connect (ONGOING)
 
 ## About
-* Developing a dynamic and responsive web application, CSU Club Connect, using React, TypeScript, and Tailwind CSS. The application serves as a centralized platform for California State University (CSU) students to discover, join, and create clubs within their campuses.
+* Developing a dynamic and responsive web application, CSU Club Connect, using React, TypeScript, Tailwind CSS, Node.js, Express.js and MySQL. The application serves as a centralized platform for California State University (CSU) students to discover, join, and create clubs within their campuses.
 
 ## Features  
 * Club Search: Easily search and find clubs based on interests, keywords, or categories.
@@ -11,4 +11,4 @@
 * Developed Using: React, Tailwind CSS, Typescript, MySQL
 
 ## Contributors
-* Jonathan Mai: @jmai321
+* Jonathan Mai: [@jmai321](https://github.com/jmai321)
