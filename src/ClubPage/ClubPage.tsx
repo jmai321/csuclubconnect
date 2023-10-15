@@ -21,7 +21,7 @@ const ClubPage: React.FC = () => {
           case 'contactinfo':
             return <ContactInfo />;
           default:
-            return null;
+            return <Home />;
         }
     };
 
@@ -29,14 +29,14 @@ const ClubPage: React.FC = () => {
         <div>
             <SchoolTopNav/>
             <ClubBanner/>
-            <div className="p-4">
-                <div className="flex justify-start space-x-6">
+            <div>
+                <div className="flex justify-center space-x-6 border-b-2 border-t-2 border-custom-color3">
                     <ClubTab label="Home" onClick={() => setActiveTab('home')} isActive={activeTab === 'home'} />
                     <ClubTab label="Announcements" onClick={() => setActiveTab('announcements')} isActive={activeTab === 'announcements'} />
                     <ClubTab label="Users" onClick={() => setActiveTab('users')} isActive={activeTab === 'users'} />
                     <ClubTab label="Contact Info" onClick={() => setActiveTab('contactinfo')} isActive={activeTab === 'contactinfo'} />
                 </div>
-                <div className="mt-4">
+                <div className="mx-8 my-8 border-custom-color3 border-2">
                     {renderTabContent()}
                 </div>
             </div>

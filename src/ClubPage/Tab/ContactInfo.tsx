@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactInfo: React.FC = () => {
     return ( 
-        <div>
+        <div className="h-screen">
             Contact Info
         </div>
      );

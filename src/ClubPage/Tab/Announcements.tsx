@@ -2,7 +2,7 @@ import React from 'react';
 
 const Announcements: React.FC = () => {
     return ( 
-        <div>
+        <div className="h-screen">
             Announcements
         </div>
      );
