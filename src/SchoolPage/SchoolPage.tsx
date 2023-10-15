@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useDataFetch } from '../useDataFetch';
 import SchoolBanner from './SchoolBanner';
 import SchoolTopNav from './SchoolTopNav';
 import ClubSearch from './ClubSearch';
-import ClubList from './ClubList';
-import axios from 'axios';
+import ClubBox from './ClubBox';
+import { Link } from 'react-router-dom';
 
 interface Club {
   id: string;
@@ -22,35 +23,31 @@ interface School {
 
 const SchoolPage: React.FC = () => {
   const { schoolSlug } = useParams<{ schoolSlug: string }>();
-  const [school, setSchool] = useState<School | null>(null);
-  const [clubs, setClubs] = useState<Club[]>([]);
+  const apiUrl = `http://localhost:8000/schools`;
+  const { data: schools, isLoading: schoolsLoading, error: schoolsError } = useDataFetch(apiUrl);
 
-  useEffect(() => {
-    axios.get<School[]>(`http://localhost:8000/schools`)
-      .then(response => {
-        const foundSchool = response.data.find(school => school.slug === schoolSlug);
-        if (foundSchool) {
-          setSchool(foundSchool);
-          setClubs(foundSchool.clubs);
-        } else {
-          console.error(`'${schoolSlug}' not found.`);
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching school data:', error);
-      });
-  }, [schoolSlug]);
-
-  if (!school) {
+  if (schoolsLoading) {
     return <div>Loading...</div>;
   }
+
+  if (schoolsError) {
+    return <div>Error: {schoolsError}</div>;
+  }
+
+  const school = schools.find((school: School) => school.slug === schoolSlug);
 
   return (
     <div>
       <SchoolTopNav />
       <SchoolBanner schoolName={school.name} />
       <ClubSearch />
-      <ClubList clubs={school.clubs} schoolSlug={school.slug}/>
+      <div className="flex flex-wrap justify-evenly mx-20 p-0">
+        {school.clubs.map((club: Club) => (
+          <Link key={club.id} to={`/${school.slug}/${club.slug}`}>
+            <ClubBox key={club.id} name={club.name} schoolSlug={school.slug} clubSlug={club.slug}/>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
